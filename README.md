@@ -1,7 +1,7 @@
 # Hello World from Flask Application
 
 ## Docker Build
-$ docker build -t <docker-image-name> .
+```$ docker build -t <docker-image-name> . ```
 
 ## Docker run
 
