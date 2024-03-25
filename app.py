@@ -1,5 +1,7 @@
 from flask import Flask
-app = Flask(__name__)
+import connexion
+
+app = connexion.FlaskApp(__name__, specification_dir='openapi/')
 
 @app.route('/')
 def hello_geek():
@@ -7,4 +9,5 @@ def hello_geek():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.add_api('openapi.yaml')
+    app.run(port=8080, debug=True)
